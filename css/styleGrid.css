@@ -84,12 +84,8 @@ footer h3 {
         grid-template-columns: 1fr 3fr 1fr;
     }
     article {
-        display: inline-block;
-        background-color: white;
         margin: 0.5em 1em 0 0;
         width: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
         min-width: 20em;
     }
     article img {
