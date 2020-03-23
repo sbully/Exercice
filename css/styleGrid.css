@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "h h h" " m m m" "f f f";
+    grid-template-rows: 10em 1fr 5em;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+header {
+    grid-area: h;
+    background-color: #E84C3D;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section {
+    grid-area: m;
+    width: 100%;
+    background-color: lightgray;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    justify-content: center;
+}
+
+article {
+    display: inline-block;
+    background-color: white;
+    margin: 1em 2em 0 0;
+    width: 20em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+article img {
+    object-fit: cover;
+    width: 20em;
+    height: 20em;
+}
+
+article h2 {
+    margin: 1em 0 1em 1em;
+    color: #E84C3D;
+    text-align: left;
+}
+
+article p {
+    margin: 0em 0.5em 1em 0.5em;
+    text-align: justify;
+}
+
+footer {
+    background-color: #E84C3D;
+    text-align: center;
+    grid-area: f;
+}
+
+footer h3 {
+    color: white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: "h h h" " m m m" "f f f";
+        grid-template-rows: 5em 1fr 5em;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    article {
+        display: inline-block;
+        background-color: white;
+        margin: 0.5em 1em 0 0;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        min-width: 20em;
+    }
+    article img {
+        display: none;
+    }
+    article h2 {
+        margin: 1em 0 0.5em 1em;
+        color: #E84C3D;
+        text-align: left;
+    }
+    article p {
+        margin: 0em 0.5em 1em 0.5em;
+        text-align: initial;
+    }
+}
